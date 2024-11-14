@@ -72,7 +72,7 @@ function playerAreaManager(pid){
 
 addEventHandler("onPlayerJoin", function(pid){
 	if(getPlayerName(pid) == "Nickname"){
-		kick(pid, "Zmie? nick w launcherze Gothic 2 Online!");
+		kick(pid, "Zmieñ nick w launcherze Gothic 2 Online!");
 	} else {
 		for(local i = 0, end = getMaxSlots(); i < end; ++i){
 			if(pid != i && getPlayerName(pid) == getPlayerName(i)){
@@ -80,8 +80,8 @@ addEventHandler("onPlayerJoin", function(pid){
 			}
 		}
 
-	sendMessageToAll(128, 255, 128, getPlayerName(pid) + " w?a?nie do??czy? do gry!");
-	sendMessageToPlayer(pid, 128, 255, 128, "Aby zmieni? aren?, u?yj komendy /map (1-4)!");
+	sendMessageToAll(128, 255, 128, getPlayerName(pid) + " w³aœnie do³¹czy³ do gry!");
+	sendMessageToPlayer(pid, 128, 255, 128, "Aby zmieniæ arenê, u¿yj komendy /map (1-4)!");
 
 	for(local i = 0, end = Spawn.len(); i < end; ++i){
 		if(getServerWorld() == Spawn[i].world){
@@ -101,7 +101,7 @@ addEventHandler("onPlayerHit", function(pid, kid, dmg, dmgtype){
 });
 
 addEventHandler("onPlayerDead", function(pid, kid){
-	sendMessageToAll(255, 128, 128, getPlayerName(kid) + " zabi? " + getPlayerName(pid) + "!");
+	sendMessageToAll(255, 128, 128, getPlayerName(kid) + " zabi³ " + getPlayerName(pid) + "!");
 	setPlayerRespawnTime(pid, 2000);
 });
 
