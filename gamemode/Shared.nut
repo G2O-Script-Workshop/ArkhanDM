@@ -1,3 +1,8 @@
+local function EquipItem(id, instance){
+	giveItem(id, instance.toupper(), 1);
+	equipItem(id, instance.toupper());
+}
+
 Spawn <- [
 	{
 		world = "NEWWORLD\\NEWWORLD.ZEN",
@@ -20,11 +25,11 @@ Spawn <- [
 			setPlayerSkillWeapon(id, WEAPON_BOW, 100);
 			setPlayerSkillWeapon(id, WEAPON_CBOW, 100);
 
-			equipItem(id, Items.id("ITMW_1H_BLESSED_03"));
-			equipItem(id, Items.id("ITAR_SLD_H"));
+			EquipItem(id, "ITMW_1H_BLESSED_03");
+			EquipItem(id, "ITAR_SLD_H");
 
-			giveItem(id, Items.id("ITMW_2H_BLESSED_02"), 1);
-			giveItem(id, Items.id("ITPO_HEALTH_ADDON_04"), 100);
+			giveItem(id, "ITMW_2H_BLESSED_02", 1);
+			giveItem(id, "ITPO_HEALTH_ADDON_04", 100);
 		}
 	},
 	{
@@ -48,11 +53,11 @@ Spawn <- [
 			setPlayerSkillWeapon(id, WEAPON_BOW, 100);
 			setPlayerSkillWeapon(id, WEAPON_CBOW, 100);
 
-			equipItem(id, Items.id("ITMW_ORKSCHLAECHTER"));
-			equipItem(id, Items.id("ITAR_THORUS_ADDON"));
+			EquipItem(id, "ITMW_ORKSCHLAECHTER");
+			EquipItem(id, "ITAR_THORUS_ADDON");
 
-			giveItem(id, Items.id("ITMW_DRACHENSCHNEIDE"), 1);
-			giveItem(id, Items.id("ITPO_HEALTH_ADDON_04"), 100);
+			giveItem(id, "ITMW_DRACHENSCHNEIDE", 1);
+			giveItem(id, "ITPO_HEALTH_ADDON_04", 100);
 		}
 	},
 	{
@@ -76,11 +81,11 @@ Spawn <- [
 			setPlayerSkillWeapon(id, WEAPON_BOW, 100);
 			setPlayerSkillWeapon(id, WEAPON_CBOW, 100);
 
-			equipItem(id, Items.id("ITMW_ELBASTARDO"));
-			equipItem(id, Items.id("ITAR_RAVEN_ADDON"));
+			EquipItem(id, "ITMW_ELBASTARDO");
+			EquipItem(id, "ITAR_RAVEN_ADDON");
 
-			giveItem(id, Items.id("ITMW_ZWEIHAENDER3"), 1);
-			giveItem(id, Items.id("ITPO_HEALTH_ADDON_04"), 100);
+			giveItem(id, "ITMW_ZWEIHAENDER3", 1);
+			giveItem(id, "ITPO_HEALTH_ADDON_04", 100);
 		}
 	},
 	{
@@ -104,11 +109,11 @@ Spawn <- [
 			setPlayerSkillWeapon(id, WEAPON_BOW, 100);
 			setPlayerSkillWeapon(id, WEAPON_CBOW, 100);
 
-			equipItem(id, Items.id("ITMW_1H_SPECIAL_04"));
-			equipItem(id, Items.id("ITAR_PAL_H"));
+			EquipItem(id, "ITMW_1H_SPECIAL_04");
+			EquipItem(id, "ITAR_PAL_H");
 
-			giveItem(id, Items.id("ITMW_2H_SPECIAL_04"), 1);
-			giveItem(id, Items.id("ITPO_HEALTH_ADDON_04"), 100);
+			giveItem(id, "ITMW_2H_SPECIAL_04", 1);
+			giveItem(id, "ITPO_HEALTH_ADDON_04", 100);
 		}
 	}
 ];

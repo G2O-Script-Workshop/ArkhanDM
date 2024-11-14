@@ -1,7 +1,7 @@
 <server>
-	<import src="gamemode/shared/shared.xml" />
+	<script src="gamemode/Client.nut" type="client" />
+	
+	<script src="gamemode/Server.nut" type="server" />
 
-	<import src="gamemode/server/server.xml" />
-
-	<import src="gamemode/client/client.xml" />
+	<script src="gamemode/Shared.nut" type="shared" />
 </server>

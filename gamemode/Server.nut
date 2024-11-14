@@ -1,15 +1,15 @@
-	local world = "";
+local world = "";
 
-	local coordinates = null;
-	local spawn = null;
-	local centrepos = null;
+local coordinates = null;
+local spawn = null;
+local centrepos = null;
 
-	local radius = null;
-	local distance = null;
+local radius = null;
+local distance = null;
 
-	local coordinates_x = 0;
-	local coordinates_y = 0;
-	local coordinates_z = 0;
+local coordinates_x = 0;
+local coordinates_y = 0;
+local coordinates_z = 0;
 
 addEventHandler("onInit", function(){
 	setTimer(function(){
@@ -66,22 +66,22 @@ function playerAreaManager(pid){
 
 	if(distance >= radius){
 		setPlayerPosition(pid, spawn.x, spawn.y, spawn.z)
-		sendMessageToPlayer(pid, 255, 128, 128, "Nie uciekaj poza arenê!");
+		sendMessageToPlayer(pid, 255, 128, 128, "Nie uciekaj poza aren?!");
 	}
 }
 
 addEventHandler("onPlayerJoin", function(pid){
 	if(getPlayerName(pid) == "Nickname"){
-		kick(pid, "Zmieñ nick w launcherze Gothic 2 Online!");
+		kick(pid, "Zmie? nick w launcherze Gothic 2 Online!");
 	} else {
 		for(local i = 0, end = getMaxSlots(); i < end; ++i){
 			if(pid != i && getPlayerName(pid) == getPlayerName(i)){
-				kick(pid, "Ten nick jest ju¿ zajêty!");
+				kick(pid, "Ten nick jest ju? zaj?ty!");
 			}
 		}
 
-	sendMessageToAll(128, 255, 128, getPlayerName(pid) + " w³aœnie do³¹czy³ do gry!");
-	sendMessageToPlayer(pid, 128, 255, 128, "Aby zmieniæ arenê, u¿yj komendy /map (1-4)!");
+	sendMessageToAll(128, 255, 128, getPlayerName(pid) + " w?a?nie do??czy? do gry!");
+	sendMessageToPlayer(pid, 128, 255, 128, "Aby zmieni? aren?, u?yj komendy /map (1-4)!");
 
 	for(local i = 0, end = Spawn.len(); i < end; ++i){
 		if(getServerWorld() == Spawn[i].world){
@@ -101,7 +101,7 @@ addEventHandler("onPlayerHit", function(pid, kid, dmg, dmgtype){
 });
 
 addEventHandler("onPlayerDead", function(pid, kid){
-	sendMessageToAll(255, 128, 128, getPlayerName(kid) + " zabi³ " + getPlayerName(pid) + "!");
+	sendMessageToAll(255, 128, 128, getPlayerName(kid) + " zabi? " + getPlayerName(pid) + "!");
 	setPlayerRespawnTime(pid, 2000);
 });
 
